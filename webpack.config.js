@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackMerge = require('webpack-merge');
+const Dotenv = require('dotenv-webpack');
 
 const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 
@@ -45,6 +46,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
           filename: './index.html',
         }),
         new webpack.ProgressPlugin(),
+        new Dotenv(),
       ],
     },
     modeConfig(mode),

@@ -9,9 +9,8 @@ class PhotoGallery extends Component {
   }
 
   async componentDidMount() {
-    const apiKey = config.UNSPLASH_API_KEY;
     try {
-      const res = await fetch(`https://api.unsplash.com/photos/random/?count=10&client_id=${apiKey}`);
+      const res = await fetch(`https://api.unsplash.com/photos/random/?count=10&client_id=${process.env.UNSPLASh_API_KEY}`);
       if (!res.ok) {
         throw Error(res.statusText);
       }
@@ -24,7 +23,7 @@ class PhotoGallery extends Component {
 
   render() {
     const { photos } = this.state;
-    console.log(photos);
+    console.log("Photos from api ", photos);
     return (
       <div>
         <h1>Starting a React App...</h1>
