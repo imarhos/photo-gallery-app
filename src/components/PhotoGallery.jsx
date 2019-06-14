@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { apiKey } from '../../api-key/unsplashApiKey';
 
 class PhotoGallery extends Component {
   constructor() {
@@ -10,6 +9,7 @@ class PhotoGallery extends Component {
   }
 
   async componentDidMount() {
+    const apiKey = config.UNSPLASH_API_KEY;
     try {
       const res = await fetch(`https://api.unsplash.com/photos/random/?count=10&client_id=${apiKey}`);
       if (!res.ok) {
