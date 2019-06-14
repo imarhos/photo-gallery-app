@@ -1,0 +1,19 @@
+{
+  "name": "photo-gallery-app",
+  "version": "1.0.0",
+  "description": "Take Home Coding Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agheith/photo-gallery-app.git"
+  },
+  "author": "Amer Gheith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agheith/photo-gallery-app/issues"
+  },
+  "homepage": "https://github.com/agheith/photo-gallery-app#readme"
+}
