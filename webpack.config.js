@@ -35,6 +35,10 @@ module.exports = ({ mode } = { mode: 'production' }) => {
           },
         ],
       },
+      resolve: {
+        enforceExtension: false,
+        extensions: ['.js', '.jsx'],
+      },
       plugins: [
         new HtmlWebpackPlugin({
           template: './public/index.html',

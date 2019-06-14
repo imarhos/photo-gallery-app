@@ -62,3 +62,6 @@ typings/
 
 #generated files
 dist/
+
+#API Key
+api-key/
