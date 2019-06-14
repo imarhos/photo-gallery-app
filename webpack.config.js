@@ -10,7 +10,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
   return webpackMerge(
     {
       mode,
-      entry: './src/index.js',
+      entry: './src/index.jsx',
       output: { path: path.resolve(__dirname, 'dist') },
       module: {
         rules: [
