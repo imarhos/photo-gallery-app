@@ -11,22 +11,27 @@ module.exports = ({ mode } = { mode: 'production' }) => {
     {
       mode,
       entry: './src/index.js',
-      output: {
-        path: path.resolve(__dirname, 'dist'),
-      },
+      output: { path: path.resolve(__dirname, 'dist') },
       module: {
         rules: [
           /* JS and JSX */
           {
             test: /\.(js|jsx)$/,
             exclude: /node_modules/,
-            use: {
-              loader: 'babel-loader',
-            },
+            use: { loader: 'babel-loader' },
+          },
+          {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [{
+              loader: 'url-loader',
+              options: {
+                limit: 10000,
+              },
+            }],
           },
           {
             test: /\.html$/,
-            use: [{ loader: 'html-loader' }],
+            use: { loader: 'html-loader' },
           },
         ],
       },

@@ -15,8 +15,6 @@ module.exports = () => ({
     }],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: '[name].[hash].css',
-    }),
+    new MiniCssExtractPlugin({ filename: '[name].[hash].css' }),
   ],
 });
