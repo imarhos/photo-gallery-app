@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
+import RightArrow from './RightArrow.jsx';
+import LeftArrow from './LeftArrow.jsx';
 
 class PhotoGallery extends Component {
   constructor() {
@@ -30,6 +32,8 @@ class PhotoGallery extends Component {
         <div className="photos-wrapper">
           {photos.map((photo, i) => <Photo key={i} photo={photo} />)}
         </div>
+        <RightArrow />
+        <LeftArrow />
       </div>
     );
   }

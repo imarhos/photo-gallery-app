@@ -61,3 +61,52 @@ html, body {
   -2px 0px 0 #000,
   2px 2px 5px #000;
 }
+
+.next-arrow , .back-arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #E9ECEF;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+
+  &:hover {
+    transition: transform ease-in .1s;
+    transform: scale(1.1)
+  }
+}
+
+.next-arrow  {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+
+  img {
+    transform: translate(2px, 0);
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.back-arrow {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+
+  img {
+    transform: translate(-2px, 0);
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
