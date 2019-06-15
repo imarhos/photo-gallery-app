@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Description from './Description';
 
 const Photo = ({ photo }) => {
-  const { urls, description, altDescription } = photo;
+  const { urls, description, alt_description } = photo;
   const styles = {
     backgroundImage: `url(${urls.regular})`,
     backgroundSize: 'contain',
@@ -12,7 +12,7 @@ const Photo = ({ photo }) => {
   };
   return (
     <div className="photo" style={styles}>
-      <Description description={description ? description : altDescription || 'No Description'} />
+      <Description description={description ? description : alt_description || 'No Description'} />
     </div>
   );
 };
