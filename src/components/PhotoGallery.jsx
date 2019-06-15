@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Photo from './Photo';
 
 class PhotoGallery extends Component {
   constructor() {
@@ -25,8 +26,10 @@ class PhotoGallery extends Component {
     const { photos } = this.state;
     console.log("Photos from api ", photos);
     return (
-      <div>
-        <h1>Starting a React App...</h1>
+      <div className="photos">
+        <div className="photos-wrapper">
+          {photos.map((photo, i) => <Photo key={i} photo={photo} />)}
+        </div>
       </div>
     );
   }

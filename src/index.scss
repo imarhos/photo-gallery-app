@@ -1,5 +1,63 @@
-$base-color: #c6538c;
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-h1 {
-  color: $base-color;
+.photos {
+  position: fixed;
+  padding:0;
+  margin:0;
+  top:0;
+  left:0;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+
+  .photos-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .photo {
+      display: inline-block;
+      height: 100%;
+      width: 50%;
+    }
+  }
+}
+
+.description-container {
+  position: relative;
+  height: 160px;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  text-align: center;
+  z-index: 9999;
+  padding: 5px 0;
+  margin-top: 50px;
+  margin-right: -50%;
+  word-wrap: break-word;
+  white-space: normal;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
 }
