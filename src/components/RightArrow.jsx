@@ -1,7 +1,7 @@
 import React from 'react';
 
-const RightArrow = () => (
-  <div className="next-arrow arrow">
+const RightArrow = ({ slideToRight }) => (
+  <div className="next-arrow arrow" onClick={slideToRight} >
     <img src="../../public/chevron-right-solid.svg" alt="right-arrow" width="10px" />
   </div>
 );
