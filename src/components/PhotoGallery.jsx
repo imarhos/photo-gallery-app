@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Photo from './Photo';
 import RightArrow from './RightArrow.jsx';
 import LeftArrow from './LeftArrow.jsx';
+import { unsplash } from '../data/unsplash';
 
 class PhotoGallery extends Component {
   constructor() {
@@ -17,7 +18,7 @@ class PhotoGallery extends Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch(`https://api.unsplash.com/photos/random/?count=10&client_id=${process.env.UNSPLASh_API_KEY}`);
+      const res = await fetch(`https://api.unsplash.com/photos/random/?count=10&client_id=${unsplash}`);
       if (!res.ok) {
         throw Error(res.statusText);
       }
@@ -58,7 +59,6 @@ class PhotoGallery extends Component {
 
   render() {
     const { photos, transformVal } = this.state;
-    console.log('Photos from api ', photos);
     return (
       <div className="photos">
         <div
