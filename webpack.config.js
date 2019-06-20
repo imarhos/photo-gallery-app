@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const Dotenv = require('dotenv-webpack');
 
@@ -26,7 +27,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             use: [{
               loader: 'url-loader',
               options: {
-                limit: 10000,
+                limit: 100000,
               },
             }],
           },
@@ -45,6 +46,13 @@ module.exports = ({ mode } = { mode: 'production' }) => {
           template: './public/index.html',
           filename: './index.html',
         }),
+        new CopyWebpackPlugin([
+          {
+            from: 'public',
+            to: '[name].[hash:base64].[ext]',
+            ignore: ['*.html'],
+          },
+        ]),
         new webpack.ProgressPlugin(),
         new Dotenv(),
       ],

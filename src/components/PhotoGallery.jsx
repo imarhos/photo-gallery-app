@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Photo from './Photo';
-import RightArrow from './RightArrow.jsx';
-import LeftArrow from './LeftArrow.jsx';
+import RightArrow from './RightArrow';
+import LeftArrow from './LeftArrow';
 import { unsplash } from '../data/unsplash';
+import leftArrow from '../../public/images/chevron-left-solid.svg';
+import rightArrow from '../../public/images/chevron-right-solid.svg';
 
 class PhotoGallery extends Component {
   constructor() {
@@ -69,8 +71,8 @@ class PhotoGallery extends Component {
           }}>
           {photos.map((photo, i) => <Photo key={i} photo={photo} />)}
         </div>
-        <RightArrow slideToRight={this.slideToRight} />
-        <LeftArrow slideToLeft={this.slideToLeft} />
+        <RightArrow slideToRight={this.slideToRight} rightArrow={rightArrow} />
+        <LeftArrow slideToLeft={this.slideToLeft} leftArrow={leftArrow} />
       </div>
     );
   }
