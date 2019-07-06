@@ -8,8 +8,8 @@ const RightArrow = ({ slideToRight, rightArrow }) => (
 );
 
 RightArrow.defaultProps = {
-  slideToLeft: PropTypes.func,
-  leftArrow: PropTypes.string,
+  slideToRight: PropTypes.func,
+  rightArrow: PropTypes.string,
 };
 
 export default RightArrow;

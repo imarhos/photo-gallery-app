@@ -6,21 +6,14 @@ html, body {
 }
 
 .photos {
-  position: fixed;
-  padding:0;
-  margin:0;
-  top:0;
-  left:0;
+  position: absolute;
   width: 100%;
-  margin: 0 auto;
   height: 100%;
   overflow: hidden;
   white-space: nowrap;
 
   .photos-wrapper {
-    position: relative;
     height: 100%;
-    width: 100%;
 
     .photo {
       display: inline-block;
@@ -109,4 +102,9 @@ html, body {
       outline: 0;
     }
   }
+}
+
+.spinner {
+  display:block;
+  margin:auto;
 }
