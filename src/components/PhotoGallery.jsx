@@ -60,7 +60,6 @@ class PhotoGallery extends Component {
   }
 
   render() {
-    console.log(this.state.transformVal)
     const { photos, transformVal, loading } = this.state;
     if (loading) {
       return <img src={spinner} alt="spinner" className="spinner" />;
